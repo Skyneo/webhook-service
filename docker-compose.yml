@@ -1,0 +1,9 @@
+webhook-service:
+  container_name: webhook-sevice
+  restart: unless-stopped
+  image: smonko/webhook-service
+  ports:
+    - 9000:9000
+  volumes:
+    - '/opt/salt/webhooks/sshkey:/root/.ssh'
+    - '/opt/salt/webhooks:/etc/webhook'
