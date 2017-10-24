@@ -3,7 +3,7 @@ webhook-service:
   restart: unless-stopped
   image: smonko/webhook-service
   ports:
-    - 9000:9000
+    - 9000w:9000
   volumes:
-    - '/opt/salt/webhooks/sshkey:/root/.ssh'
+    - '/opt/salt/webhooks/sshkey:/root/.ssh:Z'
     - '/opt/salt/webhooks:/etc/webhook'
